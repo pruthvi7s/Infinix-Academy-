@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-3 flex flex-col justify-center items-center text-muted-foreground text-xs">
         <div className="text-center">
             <p>© 2025 Infinix Academy. All rights reserved.</p>
-            <p>Created by Pruthvi and Team Infinix.</p>
+            <p>Created by Team Infinix.</p>
         </div>
       </div>
     </footer>
