@@ -191,6 +191,14 @@ export default function Header() {
                     </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
+                {assessmentData.role === 'admin' && (
+                    <DropdownMenuItem asChild>
+                        <Link href="/admin/dashboard" passHref>
+                            <BrainCircuit className="mr-2 h-4 w-4" />
+                            <span>Admin Dashboard</span>
+                        </Link>
+                    </DropdownMenuItem>
+                )}
                 <DropdownMenuItem asChild>
                      <Link href="/upgrade" passHref>
                         <Flame className="mr-2 h-4 w-4 text-orange-500" />

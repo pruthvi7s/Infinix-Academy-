@@ -12,12 +12,12 @@ export default function AdminDashboardPage() {
     const router = useRouter();
 
     useEffect(() => {
-        // This effect only runs after the auth check is complete.
-        if (!isAuthLoading) {
-            // If the user is NOT an admin, redirect them away.
-            if (!isAdmin) {
-                router.replace('/admin/login');
-            }
+        // If auth is still loading, do nothing.
+        if (isAuthLoading) return;
+
+        // Once loading is finished, if the user is NOT an admin, redirect.
+        if (!isAdmin) {
+            router.replace('/admin/login');
         }
     }, [isAdmin, isAuthLoading, router]);
 
